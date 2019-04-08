@@ -13,5 +13,10 @@ class GrafoMatriz: public Grafo{
 
         void inserir(int, int);
         void imprimir();
+        int faltaCompleto();
+        int grauVertice(int);
+        int grau();
+        void grauMaiorMenorMedia();
+        bool grafoConectado();
 };
 #endif

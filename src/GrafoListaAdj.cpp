@@ -8,11 +8,9 @@ using namespace std;
 
 GrafoListaAdj::GrafoListaAdj(int v): Grafo(v){
     if(v > 0){
-        this->numeroVertices = v;
         this->list = new Vertice[v];
     }
     else {
-        this->numeroVertices = 0;
         this->list = NULL;
     }
 }
@@ -40,9 +38,24 @@ Vertice* GrafoListaAdj::getList(){
 
 void GrafoListaAdj::imprimir(){
     cout << "[Origem] -> [Destino|Peso]" << endl;
-    for(int i = 0; i < this->numeroVertices; i++){
-        cout << "[" << i+1 << "]: ";
+    for(int i = 0; i < this->getVertexNumber(); i++){
+        cout << "[" << i << "]: ";
         this->list[i].getInicio()->imprime();
         cout << endl << endl;
     }
 }
+
+int GrafoListaAdj::faltaCompleto(){
+    return ((this->getVertexNumber()*(this->getVertexNumber()-1))/2) - this->getEdgeNumber();
+}
+
+int GrafoListaAdj::grauVertice(int v){
+    return 0;
+}
+
+int GrafoListaAdj::grau() {
+    return 2*this->getEdgeNumber();
+}
+
+void GrafoListaAdj::grauMaiorMenorMedia(){}
+bool GrafoListaAdj::grafoConectado(){return false;}

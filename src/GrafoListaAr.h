@@ -1,14 +1,13 @@
-#ifndef GRAFOLISTAADJ_H
-#define GRAFOLISTAADJ_H
+#ifndef GRAFOLISTAAR_H
+#define GRAFOLISTAAr_H
 #include"Grafo.h"
-#include"Vertice.h"
-class GrafoListaAdj: public Grafo {
+class GrafoListaAr: public Grafo {
     private:
-        Vertice *list;
-        int linhaVazia(int);
+        int numeroVertices, ultimo;
+        int **lista;
     public:
-        GrafoListaAdj(int);
-        ~GrafoListaAdj();
+        GrafoListaAr(int);
+        ~GrafoListaAr();
 
         void imprimir();
         void inserir(int, int);
@@ -17,7 +16,5 @@ class GrafoListaAdj: public Grafo {
         int grau();
         void grauMaiorMenorMedia();
         bool grafoConectado();
-
-        Vertice* getList();
 };
 #endif
