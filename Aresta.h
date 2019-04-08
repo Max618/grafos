@@ -1,0 +1,29 @@
+#ifndef ARESTA_H
+#define ARESTA_H
+class Aresta {
+/*----------------- File: Aresta.h ---------------------+
+|DESCRICAO DO ARQUIVO 								  |
+| 													  |
+| 													  |
+| Implementado por "Gabriel Maximiniano" em 19/10/2018|
++-----------------------------------------------------+ */
+    private:
+        int chegada;
+        double peso;
+        Aresta *prox;
+    public:
+         Aresta(double, int);
+         Aresta();
+         virtual ~Aresta();
+
+         void setPeso(double);
+         void setProx(Aresta*);
+
+         double getPeso();
+         int getChegada();
+         Aresta* getProx();
+
+         void imprime();
+         
+};
+#endif
