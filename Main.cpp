@@ -1,7 +1,7 @@
 #include<iostream>
-#include"GrafoMatriz.h"
-#include"GrafoListaAdj.h"
-#include"Grafo.h"
+#include"src/GrafoMatriz.h"
+#include"src/GrafoListaAdj.h"
+#include"src/Grafo.h"
 void lerArquivo(Grafo **grafo){
     int n1,n2;
     char c,c2;
