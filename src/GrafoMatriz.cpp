@@ -101,3 +101,7 @@ bool GrafoMatriz::grafoConectado() {
     }
     return true;
 }
+
+int GrafoMatriz::buscaLargura(int s, int c){
+    return 0;
+}

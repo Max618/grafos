@@ -41,3 +41,4 @@ int GrafoListaAr::grauVertice(int t){return 0;}
 int GrafoListaAr::grau(){return 0;}
 void GrafoListaAr::grauMaiorMenorMedia(){}
 bool GrafoListaAr::grafoConectado(){return false;}
+int GrafoListaAr::buscaLargura(int, int){return 0;}

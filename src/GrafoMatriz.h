@@ -18,5 +18,6 @@ class GrafoMatriz: public Grafo{
         int grau();
         void grauMaiorMenorMedia();
         bool grafoConectado();
+        int buscaLargura(int, int);
 };
 #endif

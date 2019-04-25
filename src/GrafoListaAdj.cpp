@@ -1,6 +1,7 @@
 #include"GrafoListaAdj.h"
 #include"Vertice.h"
 #include"Aresta.h"
+#include"Fila.cpp"
 #include<iostream>
 #include<string>
 
@@ -55,6 +56,37 @@ int GrafoListaAdj::grauVertice(int v){
 
 int GrafoListaAdj::grau() {
     return 2*this->getEdgeNumber();
+}
+
+int GrafoListaAdj::buscaLargura(int saida, int chegada){
+
+    if(saida == chegada) return 0;
+
+    Fila <int> Q(999);
+    Aresta *aux = NULL;
+    int v;
+    Q.inserir(saida);
+    this->list[saida].setCor('p');
+
+    while(!Q.vazia())                                               //ENQUANTO A FILA NAO ESTIVER VAZIA
+    {
+        v = Q.remover();                                            //PEGO O PRIMEIRO DA FILA
+        aux = this->list[v].getInicio();                            
+
+        while(aux != NULL)                                          //PASSO POR TODOS SEUS ADJACENTES
+        {
+            if(this->list[aux->getChegada()].getCor() == 'b')       //SE ELE AINDA NAO FOI VISITADO
+            {
+                Q.inserir(aux->getChegada());                       //COLOCO NA FILA
+            }
+            aux = aux->getProx();
+            
+        }
+
+        this->list[v].setCor('p');                                  //MARCO O VERTICE COMO VISITADO
+    }
+
+    return 0;
 }
 
 void GrafoListaAdj::grauMaiorMenorMedia(){}

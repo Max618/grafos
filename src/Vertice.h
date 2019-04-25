@@ -24,6 +24,7 @@ class Vertice {
         void setInicio(Aresta*);
         void setFim(Aresta*);
         void setCor(char);
+        int getIndice();
 
         char getCor();
         Aresta* getInicio();
@@ -32,7 +33,7 @@ class Vertice {
         Vertice* inserirInicio(Aresta*);
         Aresta* getAresta(int);
         int getNumeroArestas();
-        int getIndice();
+        
          
 };
 #endif

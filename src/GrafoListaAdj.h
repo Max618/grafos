@@ -17,6 +17,7 @@ class GrafoListaAdj: public Grafo {
         int grau();
         void grauMaiorMenorMedia();
         bool grafoConectado();
+        int buscaLargura(int, int);
 
         Vertice* getList();
 };

@@ -16,6 +16,7 @@ class Grafo {
         virtual int grau() = 0;
         virtual void grauMaiorMenorMedia() = 0;
         virtual bool grafoConectado() = 0;
+        virtual int buscaLargura(int, int) =0;
         virtual ~Grafo();
         Grafo(int);
 };

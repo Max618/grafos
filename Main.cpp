@@ -25,6 +25,7 @@ int main() {
     lerArquivo(grafo);
     
     while(b) {
+        cout << "0 - Sair" << endl;
         cout << "Escolha 1 opcao:" << endl;
         cout << "1 - Imprimir Matriz" << endl;
         cout << "2 - Imprimir Lista Adj" << endl;
@@ -37,7 +38,8 @@ int main() {
         cout << "9 - Exibir a soma dos graus do vertices" << endl;
         cout << "10 - Exibir maior, menor e grau medio" << endl;
         cout << "11 - Verificar se grafo é conectado" << endl;
-        cout << "0 - Sair" << endl;
+        cout << "12 - Busca em Largura" << endl;
+
         cin >> n;
         switch(n) {
             case 0:
@@ -80,6 +82,9 @@ int main() {
                     cout << "O grafo é conectado" << endl;
                 else
                     cout << "O grafo não é conectado" << endl;
+            break;
+            case 12:
+                grafo[1]->buscaLargura(1, 10);
             break;
         }
         //system("sleep 2");
